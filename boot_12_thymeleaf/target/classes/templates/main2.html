@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>main2.html</h1>
+ <!-- <p>이순신</p> 이전 방식--> 
+ <p th:text="'이순신'"></p> <!-- thymeleaf 방식 --> 
+ 
+ <!-- <p>{username}</p> 이전 방식-->
+ <p th:text="${username}"></p>  <!-- thymeleaf 방식: 홍길동 1 --> 
+ <span th:text="${username}"></span><br>  <!-- thymeleaf 방식: 홍길동 1 --> 
+ 
+session:<p th:text="${session.username}"></p>  <!-- thymeleaf 방식: 홍길동 2 --> 
+application:<p th:text="${application.username}"></p>  <!-- thymeleaf 방식: 홍길동 3 --> 
+
+</body>
+</html>
